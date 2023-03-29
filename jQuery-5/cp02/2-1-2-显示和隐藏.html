@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.animate{
+				margin: 10px;
+				background-color: #fff184;
+				width: 200px;
+				height: 100px;
+			}
+		</style>
+		<script src="../js/jquery-1.6.4.min.js"></script>
+		<script>
+				/* 元素的显示和隐藏
+					hide()隐藏一个元素
+					show()显示一个元素
+					toggle()切换元素的可见效果(show()和隐藏效果hide())
+				滑动显示和隐藏
+					slideToggle() 通过滑动效果切换元素的可见效果
+					slideDown() 滑动显示
+					slideUp()隐藏方式
+				淡入淡出显示和隐藏
+					fadeIn()淡入显示
+					fadeOut()淡出隐藏
+					fadeToggle()切换淡入显示和淡出隐藏 */
+			// 隐藏
+			$(document).ready(function(){
+				$(".animate").click(function(){
+					$(this).hide("slow");
+				})
+			});
+			// 显示
+		$(function(){
+			$("#show").click(function(){
+				$(".animate").show(2000);
+			})
+		});
+		//滑动显示隐藏
+		$(function(){
+			$("#clickme2").click(function(){
+				$("#img1").slideToggle(2000);
+			})
+		});
+		//淡入淡出显示隐藏
+		$(function(){
+			$("#clickme3").click(function(){
+				$("#img2").fadeToggle(2000);
+			})
+		});
+		</script>
+	</head>
+	<body>
+		<div class="animate">
+			动画
+		</div>
+		<div class="animate">
+			动画
+		</div>
+		<input type="button" value="显示" id="show"><br>
+		<img id="img1" src="../img/fruit.jpg" alt="" srcset=""><br>
+		<input type="button" id="clickme2" value="滑动显示隐藏"><br>
+		<img id="img2" src="../img/grape.jpg" alt="" srcset=""><br>
+		<input type="button" id="clickme3" value="淡入淡出显示隐藏">
+	</body>
+</html>

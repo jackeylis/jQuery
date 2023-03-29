@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<script src="../js/jquery-1.6.4.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+		$('input[name="but1"]').live("click",function(){
+			$("tr:last").after('<tr><td><input name="but1" type="button" value="添加"></td><td><input name="but2" type="button" value="删除"></td><td><input type="text"></td></tr>')
+			});
+		$('input[name="but2"]').live("click",function(){
+			//删除当前的tr元素
+			$(this).parent().parent().detach();
+			});
+		});
+	</script>
+	<body>
+		<table border="1">
+			<tr>
+				<td>
+					<input name="but1" type="button" value="添加">
+				</td>
+				<td>
+					<input name="but2" type="button" value="删除">
+				</td>
+				<td>
+					<input type="text">
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

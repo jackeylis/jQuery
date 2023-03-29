@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>表单选择器</title>
+		<style type="text/css">
+			span{
+				color: red;
+			}
+		</style>
+		<script src="../js/jquery-1.6.4.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#Btnbalue").click(function(){
+					if($(":text:eq(0)").val()==""){
+						alert("填写图书馆名称！")
+						return false;
+					}
+					if($(":text:eq(1)").val()==""){
+						alert("填写作者名称！")
+						return false;
+					}
+					if($(":text:eq(2)").val()==""){
+						alert("填写出版社名称！")
+						return false;
+					}
+					if($("input[name=txtMarketPrice]").val()<$("input[name=txtHotPrice]").val()){
+						alert("市场价不能小于热卖价格！")
+						return false;
+					}
+				});
+			});
+			//提示框 事件绑定
+			/* $(function () {
+			　　$('form').bind('submit',function () {  //给form标签绑定submit事件
+			　　　　var i=0;
+			　　　　$("input").each(function(){  //遍历input标签，判断是否有内容未填写
+			　　　　　　var vl=$(this).val();
+			　　　　　　if(vl==""){
+			　　　　　　　　i=1;  //如果判断是空就返回1
+			　　　　　　}
+			　　　　});
+			　　　　var t=$('textarea').val();  //判断textarea标签是否填写
+			　　　　if (t=='') {
+			　　　　　　i=1;	 //如果判断是空就返回1
+			　　　　}
+			　　　　if (i==1) {  //如果有未填写的，则return false阻止提交
+			　　　　　　alert('请将信息填写完整');
+			　　　　　　return false;
+			　　　　}
+			　　});
+			}); */
+		</script>
+	</head>
+	<body>
+		<!-- 创建表单 -->
+		<form>
+			商品添加
+			<table>
+				<tr>
+					<td>所属类别：</td>
+					<td>
+						<select>
+							<option>小说</option>
+							<option>散文</option>
+							<option>诗歌</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>图书名称：</td>
+					<td>
+						<input type="text"/><span>*</span>
+					</td>
+				</tr>
+				<tr>
+					<td>作者：</td>
+					<td>
+						<input type="text"/><span>*</span>
+					</td>
+				</tr>
+				<tr>
+					<td>出版社：</td>
+					<td>
+						<input type="text"/><span>*</span>
+					</td>
+				</tr>
+				<tr>
+					<td><br />市场价格：</td>
+					<td>
+						<br />
+						<input type="text" value="0" name="txtMarketPrice"/><span>*</span>
+					</td>
+				</tr>
+				<tr>
+					<td><br />热卖价：</td>
+					<td>
+						<br />
+						<input type="text" value="0" name="txtHotPrice"/><span>*</span>
+					</td>
+				</tr>
+				<tr>
+					<td><br />图形：</td>
+					<td>
+						<br />
+						<select>
+							<option>123</option>
+							<option>小说</option>
+							<option>小说</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>是否为推荐：</td>
+					<td>
+						<input type="checkbox" checked="checed"/>
+					</td>
+				</tr>
+				<tr>
+					<td>是否为热门：</td>
+					<td>
+						<input type="checkbox" checked="checed"/>
+					</td>
+				</tr>
+				<tr>
+					<td><br />简单描述：</td>
+					<td>
+						<textarea cols="30" rows="5"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<input type="submit" value="提交" id="Btnbalue"/>
+						<input type="button" value="重置"/>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../js/jquery-1.6.4.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('#btn1').click(function(){
+					var inputError = false;
+					if($("#uesName").val()==''){
+						if($('#span1').html().length<= 1){
+							$('#span1').append("<span>用户名不能为空</span>")
+						}
+						inputError = true;
+					}
+					
+					if($("#passWord").val()==''){
+						if($('#span2').html().length<= 1){
+						$('#span2').append("<span>密码不能为空</span>")
+						}
+						inputError = true;
+					}
+					
+					if($("#Name").val()==''){
+						if($('#span3').html().length<= 1){
+						$('#span3').append("<span>真实姓名不能为空</span>")
+						}
+						inputError = true;
+					}
+					
+					if($("#emie").val()==''){
+						
+						if($('#span4').html().length<= 1){
+						$('#span4').append("<span>邮编不能为空</span>")
+						}
+						inputError = true;
+					}
+				
+					if($("#phoe").val()==''){
+						if($('#span5').html().length<= 1){
+						$('#span5').append("<span>固定电话不能为空</span>")
+						}
+						inputError = true;
+					}
+	
+					if($("#maill").val()==''){
+						if($('#span6').html().length<= 1){
+						$('#span6').append("<span>Emaill不能为空</span>")
+						}
+						inputError = true;
+					}
+					if(inputError){
+						return false;
+					}
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<form>
+			<table border="1">
+				
+				<tr>
+					<td>会员注册</td>
+				</tr>
+				<tr>
+					<td>用户名：</td>
+					<td>
+						<input id="uesName" type="text"><span id="span1">*</span>
+					</td>
+				</tr>
+				<tr>
+					<td>密码：</td>
+					<td>
+						<input type="password" id="passWord"><span id="span2">*</span>
+					</td>
+				</tr>
+				<tr>
+					<td>性别：</td>
+					<td>
+						<select name="" id="">
+							<option value="男">男</option>
+								<option value="男">女</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>真实姓名：</td>
+					<td>
+						<input type="text" id="Name"><span id="span3">*</span>
+					</td>
+				</tr>
+				<tr>
+					<td>邮编：</td>
+					<td>
+						<input type="text" id="emie"><span id="span4"></span>
+					</td>
+				</tr>
+				<tr>
+					<td>固定电话：</td>
+					<td>
+						<input type="text" id="phoe"><span id="span5"></span>
+					</td>
+				</tr>
+				<tr>
+					<td>是否为推荐：</td>
+					<td>
+						<input type="checkbox" checked="checked">
+					</td>
+				</tr>
+				<tr>
+					<td>是否为热门：</td>
+					<td>
+						<input type="checkbox" checked="checked">
+					</td>
+				</tr>
+				<tr>
+					<td>E-maill：</td>
+					<td>
+						<input type="text" id="maill"><span id="span6"></span>
+					</td>
+				</tr>
+				<tr>
+					<td>简单描述：</td>
+					<td>
+						<textarea name="" id="" cols="30" rows="10"></textarea><span>*</span>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<input type="button" value="提交" id="btn1">
+						<input type="reset" value="重置" id="btn2">
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>

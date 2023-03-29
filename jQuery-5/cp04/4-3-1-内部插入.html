@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<script src="../js/jquery-1.6.4.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			//append()向每个匹配的元素内部追加内容(在原内容后)
+			//$('p').append("<b>Hello</b>")  //向所有段落<p>元素中追加'<b>Hello</b>'
+			//appendTo向每个匹配的元素内部追加内容(在原内容后)
+			$('<b>Hello</b>').append("p")//将'<b>Hello</b>'追加到所有段落<p>元素中
+			
+			//prepend() 向每个匹配的元素内部前置(前面)添加内容(放在原内容前面)
+			$('p').prepend('<b>Hello</b>'); //向所有段落<p>元素前面追加'<b>Hello</b>'
+			//prependTo() 向每个匹配的元素内部前置(前面)添加内容(放在原内容前面)
+			$('<b>Hello</b>').prepend('p');  //将'<b>Hello</b>'追加到所有段落<p>元素前面
+		});
+	</script>
+	<body>
+		<p>
+			I word like to say：
+		</p>
+	</body>
+</html>

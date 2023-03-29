@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			div {
+				background-color: darkgrey;
+				width: 150px;
+				height: 150px;
+				float: left;
+				margin-left: 10px;
+			}
+
+			.miin {
+				width: 60px;
+				height: 50px;
+				font-size: 10px;
+				margin-top: 5px;
+				border: 1px solid black;
+			}
+
+			span {
+
+
+				background-color: ;
+			}
+		</style>
+		<script src="../js/jquery-1.6.4.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				var $cr =$("#cr");
+				var cr = $cr[0];
+				$cr.click(function(){
+					if(cr.checked){
+						location.reload(true);
+						}
+					})
+			});
+			// 选择id为one的元素
+			$(function() {
+				$("#btn1").click(function() {
+					$("#one").css("background-color", "aqua")
+				})
+			});
+			// 选择class为mini的所有元素
+			$(function() {
+				$("#btn2").click(function() {
+					$(".miin").css("background-color", "aqua")
+				})
+			});
+			//选择元素名字为div的元素
+			$(function() {
+				$("#btn3").click(function() {
+					$("div").css("background-color", "aqua")
+					//$(".miin").css("background-color","darkgrey")
+				});
+			});
+			// 选择所有元素
+			$(function() {
+				$("#btn4").click(function() {
+					$("*").css("background-color", "aqua")
+				});
+			});
+			// 选择所有的span元素和id为tow的元素
+			$(function() {
+				$("#btn5").click(function() {
+					$("span").css("background-color", "aqua")
+					$("#tow").css("background-color", "aqua")
+				});
+			});
+			
+		</script>
+	</head>
+	<body>
+		<p><h2>手动刷新页面元素</h2></p>
+		<input type="checkbox" id="cr"><label for="cr">点击刷新页面元素</label>
+		<!-- 按扭 -->
+		<p><input type="button" value="选择id为one的元素" id="btn1">
+			<input type="button" value="选择class为mini的所有元素" id="btn2">
+			<input type="button" value="选择元素名字为div的元素" id="btn3">
+			<input type="button" value="选择所有元素" id="btn4">
+			<input type="button" value="选择所有的span元素和id为tow的元素" id="btn5">
+		</p>
+		<!-- 模块1 -->
+		<div class="one" id="one">
+			id为one，class为one的dvi
+			<div class="miin">
+				class为mini
+			</div>
+		</div>
+		<!-- 模块2 -->
+		<div class="one" id="tow">
+			id为tow，class为one的dvi
+			<div class="miin" title="other">
+				class为mini，title为other
+			</div>
+			<div class="miin" title="test">
+				class为minititle为test
+			</div>
+		</div>
+		<!-- 模块3 -->
+		<div>
+			<div class="miin">
+				class为mini
+			</div>
+			<div class="miin">
+				class为mini
+			</div>
+			<div class="miin">
+				class为mini
+			</div>
+			<div class="miin">
+				class为mini
+			</div>
+		</div>
+		<!-- 模块4 -->
+		<div>
+			<div class="miin">
+				class为mini
+			</div>
+			<div class="miin">
+				class为mini
+			</div>
+			<div class="miin">
+				class为mini
+			</div>
+			<div class="miin" title="teset">
+				class为mini，title为trsst
+			</div>
+		</div>
+		<!-- 模块5 -->
+		<div>
+			包含input的type为"hidden"的div
+			<input type="hidden">
+		</div>
+		<!-- 模块6 -->
+		<div>
+			<span>正在执行动画的span</span>
+		</div>
+
+	</body>
+</html>

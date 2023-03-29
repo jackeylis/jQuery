@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../js/jquery-1.6.4.min.js"></script>
+		<script>
+			// 就绪函数写法1
+			$(document).ready(function(){
+				window.alert("写法1")
+			});
+		</script>
+		<script>
+			// 就绪函数写法2
+			$().ready(function(){
+				window.alert("写法2");
+			});
+		</script>
+		<script>
+			// 就绪函数写法3
+			$(function(){
+				window.alert("写法3");
+			});
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

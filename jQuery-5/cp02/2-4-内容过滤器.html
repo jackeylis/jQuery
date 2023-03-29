@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.red{
+				border:  3px inset red;
+			}
+			.yellow{
+			border:  3px inset yellow;
+			}
+			.blue{
+				border:  3px inset blue;
+			}
+		</style>
+		<script src="../js/jquery-1.6.4.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				//
+				$("td:contains('5')").addClass("red");
+				//
+				$("td:empty").addClass("yellow")
+				//
+				$("div:has(p)").addClass("red")
+				//
+				$("h3:parent").addClass("blue")
+				//
+				$(".box:parent:contains('有内容')").addClass("red")
+			});
+		</script>
+	</head>
+	<body>
+		<table border="2px" width="300px">
+			<tr id="one">
+				<td>1</td>
+				<td>2</td>
+			</tr>
+			<tr id="tow">
+				<td>3</td>
+				<td></td>
+			</tr>
+			<tr id="three">
+				<td>5</td>
+				<td>6</td>
+			</tr>
+		</table>
+		<br>
+		<div>
+			<p>gdsfjdkfldsfdd</p>
+		</div>
+		<h3>123</h3>
+		<div class="box" style="width: 200px;height: 100px; background-color: cadetblue;">
+				有内容
+		</div>
+		<div class="box" style="width: 200px;height: 100px;background-color: darkolivegreen;">
+			
+		</div><br>
+	</body>
+</html>

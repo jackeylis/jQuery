@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>查找节点</title>
+		<script src="../js/jquery-1.6.4.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				//$()工厂函数创建元素
+			var $li01 =$("<li></li>");//创建li元素标签
+			var $li02 =$("<li>梨</li>");//创建li元素标签 包含文本内容
+			var $li03 =$("<li title='apple'>桃子</li>");//创建li元素标签 包含文本内容，和属性
+			$("ul").append($li01); //在ul下面创建
+			$("ul").append($li02);
+			$("ul").append($li03);
+			});
+		</script>
+	</head>
+	<body>
+		<p title="选择你喜欢的水果">你最喜欢的水果是？</p>
+		<ul>
+			<li title="apple">苹果</li>
+			<li title="orange">橘子</li>
+			<li title="banana">香蕉</li>
+		</ul>
+	</body>
+</html>

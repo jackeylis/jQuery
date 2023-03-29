@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.tableHeader{
+				color: white;
+				background-color: blue;
+			}
+			.even{
+				background-color: aqua;
+			}
+			.odd{
+				background-color: blueviolet;
+			}
+		</style>
+		<script src="../js/jquery-1.6.4.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("table>thead>tr").addClass("tableHeader");
+				$("table>tbody>tr:odd").addClass("odd");
+				$("table>tbody>tr:even").addClass("even");
+				$("body").append("表格第一个单元格内容是："+$("td:first").text()+"<br>");
+				$("body").append("表格最后一个单元格内容是："+$("td:last").text()+"<br>");
+			});
+		</script>
+	</head>
+	<body>
+		<table>
+			<thead>
+				<th>编号</th>
+				<th>用户名</th>
+				<th>电子邮箱</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>第一行第一个单元格</td>
+					<td>第一行第二个单元格</td>
+					<td>第一行第三个单元格</td>
+				</tr>
+				<tr>
+					<td>第二行第一个单元格</td>
+					<td>第二行第二个单元格</td>
+					<td>第二行第三个单元格</td>
+				</tr>
+				<tr>
+					<td>第三行第一个单元格</td>
+					<td>第三行第二个单元格</td>
+					<td>第三行第三个单元格</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>

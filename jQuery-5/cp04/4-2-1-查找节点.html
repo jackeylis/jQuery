@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>查找节点</title>
+		<script src="../js/jquery-1.6.4.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				//获取第二个的li元素
+			var $li =$('ul li:eq(1)');
+			//输出获取结果
+			$('body').append("第二个李元素节点文本内容是："+$li.text() +"<br>")
+			//使用attr()方法获取元素的属性值
+			var $p = $("p").attr('title');
+			//输出获取结果
+			$('body').append("p标签属性内容是：" + $p)
+			});
+		</script>
+	</head>
+	<body>
+		<p title="选择你喜欢的水果">你最喜欢的水果是？</p>
+		<ul>
+			<li title="apple">苹果</li>
+			<li title="orange">橘子</li>
+			<li title="banana">香蕉</li>
+		</ul>
+	</body>
+</html>

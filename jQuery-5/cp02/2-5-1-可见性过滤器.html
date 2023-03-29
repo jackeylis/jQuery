@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../js/jquery-1.6.4.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("body").append("隐藏的元素(tr)个数有："+$("tr:hidden").length+"<br>")
+				$("body").append("显示的元素(tr)个数有："+$("tr:visible").length+"<br>")
+				$("body").append("隐藏的元素(td)个数有："+$("td:hidden").length+"<br>")
+			});
+		</script>
+	</head>
+	<body>
+		<table border="2px">
+			<tr id="one" style="display: none;">
+				<td>1</td>
+				<td>2</td>
+			</tr>
+			<tr id="tow" style="visibility: hidden;">
+				<td>3</td>
+				<td>4</td>
+			</tr>
+			<tr id="three">
+				<td>5</td>
+				<td>6</td>
+			</tr>
+		</table>
+	</body>
+</html>

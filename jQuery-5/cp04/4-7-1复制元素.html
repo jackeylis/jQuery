@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../js/jquery-1.6.4.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("p").click(function(){
+					$(this).css('color','red');
+				});
+				//不带事件
+				$("#but1").click(function(){
+					$("#p1").clone().appendTo("body");
+				});
+				//带事件
+				$("#but2").click(function(){
+					$("#p1").clone(true).appendTo("body");
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<p id="p1">这是第一个段落</p>
+		<p id="p2">这是第二个段落</p>
+		<button id="but1">复制第一个p元素（不包含事件处理程序）插入在body元素中</button><br><br>
+		<button id="but2">复制第二个p元素（包含事件处理程序）插入在body元素中</button>
+	</body>
+</html>

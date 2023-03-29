@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>删除</title>
+		<script src="../js/jquery-1.6.4.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("p").click(function(){
+					alert($(this).html());
+				});
+				$("input[name=btnDel]").bind("click",function(){
+					//$("p").empty().appendTo(document.body);//元素清空 内容消失
+					//$("p").remove().appendTo(document.body);//从文档中移除选中的元素  元素本身不会被删除 后面仍可以使用 但元素上绑定的事件和数据就没有了
+					$("p").detach().appendTo(document.body);//detach()功能与remove()方法类似 但会保留数据和事件
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<p>Hello Word</p>
+		<P>Hello JavaScript</P>
+		<P>Hello jQueey</P>
+		<input type="button" value="删除测试" name="btnDel">
+	</body>
+</html>

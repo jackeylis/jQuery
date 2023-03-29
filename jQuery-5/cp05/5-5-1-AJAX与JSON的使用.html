@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../js/jquery-1.6.4.min.js"></script>
+		<script>
+			window.onload =function(){
+				$.ajax({
+					type:"GET",
+					url:"jsontext.json",
+					dataType:"json",
+					success:function(result){
+						let json = result;
+						console.log(json);
+						for(var i = 0;i<json.length;i++){
+							var trTD="<tr><td>"+json[i].name+"</td><td>"+json[i].age+"</td></tr>";
+							$("#tb").append(trTD);
+						}
+					},
+					error:function(){
+						alert("失败了")
+					}
+				});
+			};
+		</script>
+	</head>
+	<body>
+		<div>
+			<table style="border: 1" id="tb">
+				<tr>
+					<td>姓名</td>
+					<td>年龄</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>

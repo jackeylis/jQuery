@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			
+			#tablecolr{
+				border: 1px solid black;
+				width: 300px;
+				height: 200px;
+				font-size: 15px;
+				text-align: center;
+			}
+			#tablecolr thead{
+				
+			}
+			.odd{
+				background-color: blueviolet;
+			}
+			.even{
+				background-color: crimson;
+			}
+		</style>
+		<script src="../js/jquery-1.6.4.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("table>tbody>tr:odd").addClass("odd");
+				$("table>tbody>tr:even").addClass("even")
+			});
+		</script>
+	</head>
+	<body>
+		<table id="tablecolr" cellpadding="0" cellspacing="0">
+			<thead>
+				<th>学号</th>
+				<th>姓名</th>
+				<th>性别</th>
+				<th>总分</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1001</td>
+					<td>张小美</td>
+					<td>男</td>
+					<td>320</td>
+				</tr>
+				<tr>
+					<td>1002</td>
+					<td>李明琪</td>
+					<td>女</td>
+					<td>350</td>
+				</tr>
+				<tr>
+					<td>1003</td>
+					<td>张小明</td>
+					<td>男</td>
+					<td>320</td>
+				</tr>
+				<tr>
+					<td>1004</td>
+					<td>周泽楷</td>
+					<td>男</td>
+					<td>350</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>

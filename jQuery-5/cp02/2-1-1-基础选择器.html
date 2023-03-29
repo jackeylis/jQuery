@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.box{
+				color: aliceblue;
+				background-color: saddlebrown;
+				width: 100px;
+				height: 100px;
+			}
+		</style>
+		<script src="../js/jquery-1.6.4.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("input").click(function(){ /* 获取标签 */
+					$(".pp").css("color","red");  /* 获取类 */
+					$("#hh").css("color","fuchsia")/* 获取id */
+					$("div").addClass("box");/* 获取css属性 */
+				});
+				
+			});
+		</script>
+	</head>
+	<body>
+		<h1 id="hh">这是标题</h1>
+		<p class="pp">这是段落1</p>
+		<p class="pp">这是段落2</p>
+		<p>这是段落3</p>
+		<div>
+			文字
+		</div>
+		<input type="button" value="点击按扭">
+	</body>
+</html>

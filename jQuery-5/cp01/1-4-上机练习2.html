@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<script src="../js/jquery-1.6.4.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#btnGo").click(function(){
+				alert("你点击了我!1")
+			})
+		});
+		$().ready(function(){
+			$("#btnGo2").click(function(){
+				alert("你点击了我!2")
+			})
+		});
+		$(function(){
+			$("#btnGo3").click(function(){
+				alert("你点击了我!3")
+			})
+		});
+	</script>
+	<body>
+			<input name="btnGo" id="btnGo" type="button" value="点我方法1">
+			<input name="btnGo2" id="btnGo2" type="button" value="点我方法2">
+			<input name="btnGo3" id="btnGo3" type="button" value="点我方法3">
+	</body>
+</html>

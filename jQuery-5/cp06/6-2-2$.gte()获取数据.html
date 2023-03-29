@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	<script src="../js/jquery-1.6.4.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$("#btGET").click(function(){
+				$.get("jsonT.json",function(data){
+					$("#mydiv").empty();
+					var strHTML="";
+					//$each()可以实现对数组 json和dom结果的遍历
+					$.each(data,function(infoIndex,Info){
+						strHTMl+="姓名"+Info["name"]+"<br>";
+						strHTMl+="性别"+Info["age"]+"<br>";
+						strHTMl+="邮箱"+Info["eimn"]+"<br><hr>";
+					});
+					console.log(strHTMl)
+					$("#mydiv").html(strHTMl);
+				});
+			});
+		});
+	</script>
+	</head>
+	<body>
+		<div id="divFrame">
+			<div id="divTitle">
+				<input type="button" id="btGET" value="获取数据" />
+			</div>
+		</div>
+		<div id="divContent">
+			<div id="mydiv">
+				
+			</div>
+		</div>
+		
+	</body>
+</html>

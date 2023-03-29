@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../js/jquery-1.6.4.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				//取消勾选
+				$("#btnCancel").click(function(){
+					$("input:checked").prop("checked",false);
+				});
+				//全选
+				$("#btnSelAll").click(function(){
+					$("input[type='checkbox']").prop("checked",true);
+				});
+				//全不选
+				$("#btnNotSel").click(function(){
+					$("input[type='checkbox']").prop("checked",false);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<form action="">
+			<input type="checkbox" checked="checked">唱歌
+			<input type="checkbox" checked="checked">跳舞
+			<input type="checkbox" checked="checked">游泳
+			<input type="checkbox" checked="checked">打游戏
+			<input type="checkbox" checked="checked">踢足球
+			<input type="checkbox" checked="checked">打篮球
+			<input type="checkbox" checked="checked">打羽毛球
+			<input type="checkbox" checked="checked">打乒乓球
+			<br>
+			<input type="button" value="取消勾选" id="btnCancel">
+			<input type="button" value="全选" id="btnSelAll">
+			<input type="button" value="全不选" id="btnNotSel">
+		</form>
+	</body>
+</html>

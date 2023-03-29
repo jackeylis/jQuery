@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<country>
+	<name>中国</name>
+	<province>
+		<name>广西</name>
+		<citys>
+			<city>南宁</city>
+			<city>柳州</city>
+			<city>梧州</city>
+		</citys>
+	</province>
+	<province>
+		<name>广东</name>
+		<citys>
+			<city>东莞</city>
+			<city>佛山</city>
+			<city>中山</city>
+		</citys>
+	</province>
+	<province>
+		<name>四川</name>
+		<citys>
+			<city>成都市</city>
+			<city>广安市</city>
+			<city>凉山彝族自治州</city>
+		</citys>
+	</province>
+</country>

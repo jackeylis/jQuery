@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.animate{
+				margin: 10px;
+				background-color: #fff184;
+				width: 200px;
+				height: 100px;
+			}
+		</style>
+		<script src="../js/jquery-1.6.4.min.js"></script>
+		<script>
+			// $(document).ready(function(){
+			// 	$(".animate").click(function(){
+			// 		$(this).hide("slow");
+			// 	})
+			// });
+			
+		
+		</script>
+	</head>
+	<body>
+		<div class="animate">
+			动画
+		</div>
+		<div class="animate">
+			动画
+		</div>
+		<script type="text/javascript">
+				var box=document.getElementsByClassName("animate");
+				console.log(box)
+				for (var i = 0; i < box.length; i++) {
+					box[i].onclick=function() {
+						this.style.display="none";
+					}
+				}
+	
+		</script>
+	</body>
+</html>
